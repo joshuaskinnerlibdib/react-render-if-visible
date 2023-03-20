@@ -17,6 +17,7 @@ type Props = {
   /** E.g. 'span', 'tbody'. Default = 'div' */
   rootElement?: string
   rootElementClass?: string
+  rootElementId?: string
   /** E.g. 'span', 'tr'. Default = 'div' */
   placeholderElement?: string
   placeholderElementClass?: string
@@ -31,6 +32,7 @@ const RenderIfVisible = ({
   root = null,
   rootElement = 'div',
   rootElementClass = '',
+  rootElementId = '',
   placeholderElement = 'div',
   placeholderElementClass = '',
   children,
@@ -101,6 +103,7 @@ const RenderIfVisible = ({
     ),
     ref: intersectionRef,
     className: rootClasses,
+    id: rootElementId,
   })
 }
 
